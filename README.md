@@ -1,8 +1,8 @@
-<h1 align="left">Meu portfólio</h1>
+<h1 align="left">Baber Shop</h1>
 
 ###
 
-<h3 align="left">Site de portfólio responsivo</h3>
+<h3 align="left">Serviços Personalizado de Barbearia</h3>
 
 ###
 ## Tecnologias Utilizadas

@@ -1091,17 +1091,18 @@ button {
 
 @media screen and (max-width: 480px) {
   .section {
-    padding: 1rem 0;
+    padding: 0rem 0;
     min-height: 25vh;
   }
   .home-content {
-    padding-top: 4.5rem;
+    padding-top: 15.5rem;
     gap: 1.5rem;
   }
   .home-container {
-    height: auto;
+    height: 1000px;
     padding: 2rem 0;
   }
+
   .home-title {
     font-size: var(--h1-font-size);
     width: 20ch;
@@ -1120,6 +1121,7 @@ button {
     font-weight: var(--font-bold);
   }
   .banner-container {
+    padding-top: 5rem;
     width: 100%;
   }
   .banner-content {
@@ -1134,7 +1136,7 @@ button {
     margin: 0;
   }
   .service-custom {
-    padding-top: 3px;
+    padding-top: 8rem;
     max-width: 80%;
   }
   .service-container{
@@ -1146,6 +1148,10 @@ button {
   }
   .service-title {
     width: 113%;
+  }
+  .barber-servicesl, 
+  .detach  {
+    padding-top: 8rem;
   }
   .barber-services-container {
     padding: 0;

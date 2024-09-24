@@ -996,7 +996,7 @@ button {
     width: 70%;
   }
   .service-img {
-    width: 90%;
+    width: 100%;
   }
   .service-custom {
     min-height: 800px; /* Aumenta a altura mínima da seção customizada */
@@ -1007,7 +1007,7 @@ button {
     position: relative;
   }
   .barber-services-container {
-    padding-top: 30rem;
+    padding-top: 40rem;
     width: 95%;
   }
   .detach-title {
@@ -1064,7 +1064,7 @@ button {
     width: fit-content;
   }
   .service-subtitle {
-    width: 85%;
+    width: 101%;
   }
   .barber-services {
     margin: 0 auto;
@@ -1090,6 +1090,10 @@ button {
 }
 
 @media screen and (max-width: 480px) {
+  .section {
+    padding: 1rem 0;
+    min-height: 25vh;
+  }
   .home-content {
     padding-top: 4.5rem;
     gap: 1.5rem;
@@ -1129,7 +1133,6 @@ button {
     padding: auto 1rem auto 1rem;
     margin: 0;
   }
-
   .service-custom {
     padding-top: 3px;
     max-width: 80%;
@@ -1142,9 +1145,17 @@ button {
     flex-direction: column;
   }
   .service-title {
-    width: 350px;
+    width: 113%;
+  }
+  .barber-services-container {
+    padding: 0;
+    padding-top: auto;
+
   }
   .detach-title {
     font-size: var(--h3-font-size);
+  }
+  .footer{
+    padding-top: 0rem;
   }
 }

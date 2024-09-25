@@ -1382,7 +1382,7 @@ textarea {
     gap: 4rem;
   }
   .contact {
-    padding-top: 10rem;
+    padding-top: 22rem;
   }
   .contact-content-description {
     width: 40%;
@@ -1397,7 +1397,7 @@ textarea {
     width: 550px;
   }
   .form {
-    width:100%
+    width:90%
   }
   .footer{
     padding-top: 0rem;

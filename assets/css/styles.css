@@ -141,12 +141,12 @@ img {
 button {
   border: none;
   background: transparent;
+  color: var(--text-cor);
 }
 
 /*==================== CSS CLASSES ====================*/
 .section {
   padding: 2rem 0 4rem;
-  min-height: 50vh;
 }
 
 .section-subtitle {
@@ -283,7 +283,8 @@ button {
 
 /*==================== HOME ====================*/
 .home-container,
-.detach-container {
+.detach-container,
+.contact-container {
   gap: 1rem;
   width: 100%;
   display: flex;
@@ -297,7 +298,8 @@ button {
 }
 
 .home-container::before,
-.detach-container::before {
+.detach-container::before,
+.contact-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -328,7 +330,8 @@ button {
 }
 
 .home-title,
-.detach-title {
+.detach-title,
+.contact-title {
   font-family: var(--title-font);
   font-weight: var(---title-heigth);
   font-size: var(--big-font-size);
@@ -358,6 +361,7 @@ button {
   height: 62px;
   font-size: var(--normal-font-size);
   font-weight: var(--font-bold);
+  text-transform: uppercase;
   background-color: #DEC7A6 ;
 }
 
@@ -369,6 +373,7 @@ button {
   color: var(--texto-cor);
   background-color: transparent ;
   border: 3px solid #fff;
+  text-transform: uppercase;
 }
 
 .home-scroll {
@@ -401,13 +406,13 @@ button {
 
 /*==================== BANNER ====================*/
 
-.banner-container {
+.banner-container, .banner-service-container {
   padding-top: 40px;
   padding-bottom: 40px;
   z-index: 5;
 }
 
-.banner-content { 
+.banner-content, .banner-content-service { 
   background-color: var(--body-cor);
   width: 1000px;
   height: 233px;
@@ -418,7 +423,7 @@ button {
   box-shadow: rgba(0, 0, 0, 0.0) 0px 1px 1px, rgba(0, 0, 0, 0.2) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.0) 0px 8px 8px, rgba(0, 0, 0, 0.0) 0px 16px 16px;
 }
 
-.banner-content-item {
+.banner-content-item{
  text-align: center;
 }
 
@@ -567,7 +572,7 @@ button {
 
 
 /*==================== BARBER SERVICES ====================*/
-.barber-services{
+.barber-services, .banner-service{
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 40px;
@@ -587,13 +592,13 @@ button {
   min-height: 600px;
 } 
 
-.barber-services-title {
+.barber-services-title, .banner-service-titlee {
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
   text-transform: uppercase;
 }
 
-.barber-services-subtitle {
+.barber-services-subtitle, .banner-service-subtitle {
   margin: 0 auto;
   font-size: var(--h4-font-size);
   font-weight: var(--font-medium);
@@ -644,7 +649,7 @@ button {
   font-size: 1rem;
 }
 
-/*==================== Detach ====================*/
+/*==================== DETACH ====================*/
 .detach-container {
   background: url('../img/handsome-man-barbershop-shaving-beard\ 3.jpg') no-repeat center center/cover;
 
@@ -658,11 +663,158 @@ button {
 }
 
 
+/*==================== BANNER SERVICE ====================*/
+
+.banner-service-container{
+  margin: 0 auto;
+}
+.banner-content-service { 
+  padding-top: 4rem;
+  background-color: var(--body-color);
+  box-shadow: none;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  align-content: space-between;
+  gap: 4rem;
+}
+
+.banner-content-service-items {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8rem;
+  align-items: center;
+}
+
+.banner-content-item-service {
+  text-align: center;
+  width: 207px;
+}
+
+/*==================== CONTACT ====================*/
+.contact-container {
+  background: url('../img/image.jpg') no-repeat center center/cover;
+  background-position-x: center;
+  height: 700px;
+}
+
+.contact-content {
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-title {
+  padding-top: 20rem;
+  padding-left: 1rem;
+  text-align: left;
+  font-size: var(--h1-font-size);
+}
+
+.contact-icone {
+  font-size: 3rem;
+}
+
+.contact-form {
+  padding-top: 30rem;
+}
+
+.form {
+  background-color: var(--container-cor);
+  padding: 5.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 500px;
+  height: 490px;
+  z-index: 6;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.detach-content-button {
+  margin-top: var(--mb-2);
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.contact-content-info,
+.contact-content-info-item {
+  padding-top: 2rem ;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--container-cor) 
+}
+
+.contact-content-info-item {
+  padding: .5rem;
+ flex-direction: row;
+ align-items: center;
+}
+
+.button-form {
+  width: 101%;
+  font-size: .9rem;
+}
+
+label {
+  margin: .5rem 0 .5rem 0;
+  font-size: 1rem;
+  display: block;
+  color: var(--text-cor);
+}
+
+input {
+  width: 100%;
+}
+
+input,
+textarea {
+  display: block;
+  border: 1px solid #000;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #DEC7A6;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+textarea {
+  padding: 1rem;
+  height: 500px;
+}
+
+.form-content {
+  margin: .5rem auto;
+  display:  flex;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+/*==================== Mapa ====================*/
+
+.mapa{
+  padding: 0;
+}
+
 
 /*==================== FOOTER ====================*/
 
 .footer {
-  padding-top: 2rem;
+  padding-top: 0;
 }
 
 .foooter-container {
@@ -909,7 +1061,13 @@ button {
   .banner-container {
     column-gap: 1rem;
   }
-
+  
+  .contact {
+    padding-bottom: 0;
+  }
+  .mapa{
+    padding: 0;
+  }
   .footer-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -956,6 +1114,18 @@ button {
     padding-top:0 ;
     padding: 31px; 
     max-width: 100%;
+  }
+  .banner-service-container {
+    padding: 10rem auto;
+
+  }
+  .banner-content-service-items {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .banner-content-service  {
+    grid-template-columns: 1fr;
   }
   .foooter-container {
     padding: 1rem;
@@ -1013,8 +1183,30 @@ button {
   .detach-title {
     font-size: var(--h1-font-size);
   }
-  .footer {
-    padding-top: 50rem;
+  .contact{
+    padding-top: 30rem;
+  }
+  .contact-content {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .contact-title, 
+  .form {
+    padding-top: 2rem;
+  }
+  .contact-form {
+    padding-top: 2rem;
+  }
+
+  .mapa iframe {
+    height: 900px;
+  }
+
+}
+
+@media screen and ((max-width: 1280px) and (min-width: 980px)) {
+  .contact{
+    padding-top: 3rem;
   }
 }
 
@@ -1022,7 +1214,11 @@ button {
   .home-title {
     width: 95%;
   }
-} 
+  .contact{
+    padding-top: 30rem;
+  }
+
+}
 
 
 /* Responsividade abaxio 768 */
@@ -1089,10 +1285,27 @@ button {
   }
 }
 
+@media  screen and (max-width: 568px) {
+  .contact-content{
+    width: 100%;
+  }
+  .contact-content-description {
+    width: 50%;
+  }
+  .contact-title {
+    font-size: var(--h3-font-size);
+  }
+  .contact-form,
+  .form,
+  .contact-content-info {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
+
   .section {
-    padding: 0rem 0;
-    min-height: 25vh;
+    padding: 0;
   }
   .home-content {
     padding-top: 15.5rem;
@@ -1102,19 +1315,18 @@ button {
     height: 1000px;
     padding: 2rem 0;
   }
-
   .home-title {
     font-size: var(--h1-font-size);
     width: 20ch;
   }
-
   .home-subtitle {
+    padding: .5rem;
     margin-bottom: var(--mb-0-75);
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     text-align: center;
+    width: 100%;
   }
-  
   .home-button, .home-button-service {
     width: 200px;
     font-size: var(--normal-font-size);
@@ -1136,8 +1348,11 @@ button {
     margin: 0;
   }
   .service-custom {
-    padding-top: 8rem;
+    padding-top: 12rem;
     max-width: 80%;
+  }
+  .service-item {
+    padding-top: 1rem;
   }
   .service-container{
     width: fit-content;
@@ -1151,15 +1366,38 @@ button {
   }
   .barber-services, 
   .detach  {
-    padding-top: 8rem;
+    padding-top: 15rem;
   }
   .barber-services-container {
     padding: 0;
     padding-top: auto;
-
   }
   .detach-title {
     font-size: var(--h3-font-size);
+  }
+  .banner-service {
+    width: 100%;
+  }
+  .banner-content-service-items {
+    gap: 4rem;
+  }
+  .contact {
+    padding-top: 10rem;
+  }
+  .contact-content-description {
+    width: 40%;
+  }
+  .contact-form,
+  .form,
+  .contact-content-info {
+    padding-left: 1rem;
+    width: 80%;
+  } 
+  .contact-content-info-wpp {
+    width: 550px;
+  }
+  .form {
+    width:100%
   }
   .footer{
     padding-top: 0rem;

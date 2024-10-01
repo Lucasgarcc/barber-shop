@@ -15,7 +15,7 @@
     --primeira-cor-lighter: hsl(var(--hue-color), 9%, 50%);
     --titulo-cor: hsl(var(--hue-color), 1%, 100%);
     --text-cor: hsl(var(--hue-color), 70%, 1%);
-    --texto-cor-light: hsl(var(--hue-color), 8%, 65%);
+    --text-cor-light: hsl(var(--hue-color), 1%, 100%);
     --input-cor: hsl(var(--hue-color), 70%, 96%);
     --body-cor: #F8F5EF;
     --header-bg-color: #ffffffc1;
@@ -220,6 +220,7 @@ button {
 
 .nav-container {
   max-width: 1200px;
+  padding-bottom: 2rem;
   margin: 0 auto;
 }
 
@@ -314,6 +315,8 @@ button {
 }
 
 /*==================== HOME ====================*/
+
+
 .home-container,
 .detach-container,
 .contact-container {
@@ -762,7 +765,7 @@ button {
 }
 
 .contact-icone {
-  color: var(--primeira-cor-seg);
+  color: var(--text-cor-light); 
   font-size: 3rem;
   z-index: 1;
 }
@@ -797,7 +800,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  color: var(--text-cor); 
+  color: var(--text-cor-light);
   z-index: 1;
 }
 
@@ -1069,8 +1072,12 @@ textarea {
     margin: 0;
   }
   .section {
-    padding: 6rem 0 2rem;
+    padding: 4rem 0 2rem;
   }
+  .home {
+    padding-top: 0;
+  }
+  
   .section-subtitle {
     margin-bottom: 4rem;
   }
@@ -1220,7 +1227,7 @@ textarea {
     position: relative;
   }
   .barber-services-container {
-    padding-top: 40rem;
+    padding-top: 56rem;
     width: 95%;
   }
   .detach-title {

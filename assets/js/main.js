@@ -1,23 +1,32 @@
 
-
-
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.querySelector('#nav-menu'),
-    navToggle = document.querySelector('#nav-toggle'),
-    navClose = document.querySelector('#nav-close');
-  
+  navToggle = document.querySelector('#nav-toggle'),
+  navClose = document.querySelector('#nav-close');
 
-/*===== MENU SHOW =====*//*===== MENU HIDDEN =====*/
+/*===== MENU SHOW =====*/
 /* Validate if constant exists */
-
-function toggleMenu( ){
+function toggleMenu() {
+  // Alterna a classe de mostrar o menu
   navMenu.classList.toggle('show-menu');
+
+  // Também alterna a classe para mudar o ícone do botão
+  navToggle.classList.toggle('active');
 }
 
-navToggle ? navToggle.addEventListener('click', toggleMenu) : false; 
-navClose ? navClose.addEventListener('click',toggleMenu) : false;
+// Exibe o menu ao clicar no ícone de abrir
+if (navToggle) {
+  navToggle.addEventListener('click', toggleMenu);
+}
+
+// Esconde o menu ao clicar no ícone de fechar
+if (navClose) {
+  navClose.addEventListener('click', toggleMenu);
+}
+
 
 /*==================== REMOVE MENU MOBILE ====================*/
+
 const navLink = document.querySelectorAll('.nav-link');
 
 function linkAction() {
@@ -48,85 +57,6 @@ function skillsAction() {
 }
 header.forEach((item) => item.addEventListener('click', skillsAction));
 
-/*==================== QUALIFICATION TABS ====================*/
-
-const tabs = document.querySelectorAll('[data-target]');
-const tabContents = document.querySelectorAll('[data-content]');
-const tabButtons = document.querySelectorAll('.qualification-button');
-const activeTab = 'qualification-active'
-
-tabs.forEach((tab) =>{
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.target)
-
-    tabContents.forEach((tabContent) => {
-      tabContent.classList.remove(activeTab) 
-    })
-    target.classList.add(activeTab)
-    tab.forEach((tab) => { 
-      tab.classList.remove(activeTab) 
-    });
-    tab.classList.add(activeTab)
-  })
-})
-
-tabButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    // Remover a classe 'qualification-active' de todos os botões
-    tabButtons.forEach((btn) => {
-      btn.classList.toggle(activeTab);
-      btn.style.backgroundColor = 'var(--body-cor)';; // Cor de fundo padrão
-      btn.style.color = 'var(--text-cor)';
-    });
-
-    // Adicionar a classe 'qualification-active' ao botão clicado
-    button.classList.add(activeTab);
-
-    // Alterar a cor do texto
-    button.style.color = 'var(--primeira-cor)';
-  });
-});
-
-/*==================== SERVICES MODAL ====================*/
-
-const modalElements = document.querySelectorAll('.services-modal');
-const buttonElements = document.querySelectorAll('.services-button');
-const closeElements = document.querySelectorAll('.services-modal-close');
-
-const activeModal = 'active-modal'
-
-buttonElements.forEach((item, i) => {
-  item.addEventListener('click', () =>{
-    modalElements[i].classList.add(activeModal)
-  })
-});
-
-closeElements.forEach((modalClose) => {
-  modalClose.addEventListener('click', () => {
-    modalElements.forEach((views) => {
-      views.classList.remove(activeModal);
-    });
-  });
-});
-
-/*==================== PORTFOLIO SWIPER ====================*/
-
- new Swiper('.portfolio-container', {
-  direction: 'horizontal',
-  loop: true,
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  // And if we need scrollbar
-  hide: true,
-});
 
 /*==================== SCROLL SMOOTH ====================*/
 const navLinks = document.querySelectorAll('[data-menu="smooth"] a[href^="#"]');
@@ -201,6 +131,7 @@ if (sectionsScroll.length) {
   window.addEventListener('scroll', animaScroll);
 }
 
+
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 
 function scrollBackground() {
@@ -223,12 +154,14 @@ function scrollBackground() {
 }
 window.addEventListener('scroll', scrollBackground);
 
+
 /*==================== SHOW SCROLL UP ====================*/ 
 function scrollUp() {
   const scrollUp = document.querySelector('#scroll-up');
   this.scrollY >= 500 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', scrollUp)
+
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.querySelector('#theme-button');
@@ -254,6 +187,7 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-icon', getCurrentIcon());
 })
+
 
 /*==================== TYPEWRITER ANIMATION ====================*/
 
